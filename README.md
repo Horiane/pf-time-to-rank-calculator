@@ -1,1 +1,1 @@
-this is a python script.
+This version is being worked on, no progress yet.
