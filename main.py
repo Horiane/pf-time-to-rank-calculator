@@ -7,6 +7,7 @@ from math import trunc
 playerRank=int(input("Your current rank:"))
 goalRank=int(input("Your target rank:"))
 avgXP=int(input("Your average xp per match:"))
+avgHours=int(input("Your average hours per day:"))
 
 totalXPneeded=0
 
@@ -19,6 +20,8 @@ matchestgt=totalXPneeded/avgXP
 timetgt=matchestgt*900
 int(timetgt)
 
+realtime=(timetgt/3600)/avgHours
+
 days=timetgt//86400
 hours=(timetgt-(days*86400))//3600
 minutes=(timetgt-(days*86400)-(hours*3600))//60
@@ -28,6 +31,8 @@ hours=trunc(hours)
 minutes=trunc(minutes)
 
 #output
+print(f"{realtime} days of grinding")
+
 if minutes==0:
     print(f"{days} days and {hours} hours of continuous grinding")
 elif hours==0:
