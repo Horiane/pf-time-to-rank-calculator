@@ -1,4 +1,4 @@
-#made by u/icantnotbreathe, suggestions by u/drift7rs
+#made by u/icantnotbreathe, suggestion by u/drift7rs
 #feel free to copy!
 #imports
 from math import trunc
@@ -18,9 +18,11 @@ totalXPneeded=0 #declare varible to avoid complier issues
 i=playerRank #Setting the starting rank to calculate
 
 #calculation
-for i in range(goalRank-playerRank): #loop to calc the xp needed by going from player rank - goal rank
-    totalXPneeded=totalXPneeded+((i+1)*1000) #a "equation"
-    i=+1
+totalGoalXP=1000*(((goalRank*goalRank)+goalRank)/2) #calc total goal xp
+totalPlayerXP=1000*(((playerRank*playerRank)+playerRank)/2) #calc total player xp
+
+totalXPneeded=totalGoalXP-totalPlayerXP
+
 matchesNeeded=totalXPneeded/avgXP #matches needed
 timeNeeded=matchesNeeded*930 #15 minutes=900 seconds + 30 seconds intermission
 
